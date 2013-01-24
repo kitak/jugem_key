@@ -1,6 +1,5 @@
 # coding: utf-8
 require 'cgi'
-require 'feed-normalizer'
 require 'net/http'
 require 'openssl'
 require 'rexml/document'
