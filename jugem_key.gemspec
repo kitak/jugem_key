@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["kei.kita2501@gmail.com"]
   gem.description   = %q{A simple interface for using the JugenKey Authentication API.}
   gem.summary       = %q{using the JugemKey auth}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/kitak/jugem_key"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
