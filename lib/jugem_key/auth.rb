@@ -31,7 +31,7 @@ module JugemKey
         k.to_s + "=" + CGI.escape(v)
       }.join('&')
 
-      URI.join(JUGEMKEY_URL, '?'+query)
+      URI(JUGEMKEY_URL + '?' + query)
     end
 
     def token(frob)
