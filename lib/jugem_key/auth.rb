@@ -3,6 +3,7 @@ require 'cgi'
 require 'feed-normalizer'
 require 'net/http'
 require 'openssl'
+require 'rexml/document'
 require 'time'
 
 module JugemKey
@@ -47,10 +48,10 @@ module JugemKey
         "X-JUGEMKEY-API-SIG"     => sig
       })
 
+      token = REXML::Document.new(atom).elements['entry/token'].text
       require 'pp'
-      pp atom
-      pp FeedNormalizer::FeedNormalizer.parse(atom)
-      'hoge'
+      pp token 
+      token
     end
 
     def user(token)
@@ -66,10 +67,10 @@ module JugemKey
         "X-JUGEMKEY-API-SIG"     => sig
       })
 
+      user = REXML::Document.new(atom).elements['entry/title'].text
       require 'pp'
-      pp atom
-      pp FeedNormalizer::FeedNormalizer.parse(atom)
-      'hoge'
+      pp user 
+      user
     end
 
     private
