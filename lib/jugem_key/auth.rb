@@ -41,10 +41,10 @@ module JugemKey
         frob:    frob
       } 
       atom = fetch_atom('http://api.jugemkey.jp/api/auth/token', {
-        "X-JUGEMKEY-API-CREATED": Time.now.iso8601,
-        "X-JUGEMKEY-API-KEY":     @api_key,
-        "X-JUGEMKEY-API-FROB":    frob,
-        "X-JUGEMKEY-API-SIG":     sig
+        "X-JUGEMKEY-API-CREATED" => Time.now.iso8601,
+        "X-JUGEMKEY-API-KEY"     => @api_key,
+        "X-JUGEMKEY-API-FROB"    => frob,
+        "X-JUGEMKEY-API-SIG"     => sig
       })
 
       require 'pp'
@@ -60,10 +60,10 @@ module JugemKey
         token:   token 
       } 
       fetch_atom('http://api.jugemkey.jp/api/auth/user', {
-        "X-JUGEMKEY-API-CREATED": Time.now.iso8601,
-        "X-JUGEMKEY-API-KEY":     @api_key,
-        "X-JUGEMKEY-API-TOKEN":   token,
-        "X-JUGEMKEY-API-SIG":     sig
+        "X-JUGEMKEY-API-CREATED" => Time.now.iso8601,
+        "X-JUGEMKEY-API-KEY"     => @api_key,
+        "X-JUGEMKEY-API-TOKEN"   => token,
+        "X-JUGEMKEY-API-SIG"     => sig
       })
 
       require 'pp'
