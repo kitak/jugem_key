@@ -59,7 +59,7 @@ module JugemKey
         created: Time.now.iso8601, 
         token:   token 
       })
-      fetch_atom('http://api.jugemkey.jp/api/auth/user', {
+      atom = fetch_atom('http://api.jugemkey.jp/api/auth/user', {
         "X-JUGEMKEY-API-CREATED" => Time.now.iso8601,
         "X-JUGEMKEY-API-KEY"     => @api_key,
         "X-JUGEMKEY-API-TOKEN"   => token,
