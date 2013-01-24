@@ -19,7 +19,7 @@ module JugemKey
       sig = api_sig({
         api_key: @api_key,
         callback_url: params[:callback_url],
-        perms: "read"      
+        perms: "auth"      
       })
 
       query = {
