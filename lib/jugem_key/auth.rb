@@ -82,14 +82,15 @@ module JugemKey
       Net::HTTP.version_1_2
       url = URI.parse(url)
 
+      res = nil 
       Net::HTTP.start(url.host, url.port) do |http|
         res = http.get(url.path, header)
+      end
 
-        if res.class == Net::HTTPOK
-          return res.body
-        else
-          raise res.message
-        end
+      if res.class == Net::HTTPOK
+        res.body
+      else
+        raise res.message
       end
     end
 
