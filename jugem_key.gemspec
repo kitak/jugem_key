@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = JugemKey::VERSION
   gem.authors       = ["Keisuke KITA"]
   gem.email         = ["kei.kita2501@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A simple interface for using the JugenKey Auththentication API.}
+  gem.summary       = %q{using the JugemKey auth}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
