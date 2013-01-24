@@ -35,11 +35,11 @@ module JugemKey
     end
 
     def token(frob)
-      sig = {
+      sig = api_sig({
         api_key: @api_key,
         created: Time.now.iso8601, 
         frob:    frob
-      } 
+      })
       atom = fetch_atom('http://api.jugemkey.jp/api/auth/token', {
         "X-JUGEMKEY-API-CREATED" => Time.now.iso8601,
         "X-JUGEMKEY-API-KEY"     => @api_key,
@@ -54,11 +54,11 @@ module JugemKey
     end
 
     def user(token)
-      sig = {
+      sig = api_sig({
         api_key: @api_key,
         created: Time.now.iso8601, 
         token:   token 
-      } 
+      })
       fetch_atom('http://api.jugemkey.jp/api/auth/user', {
         "X-JUGEMKEY-API-CREATED" => Time.now.iso8601,
         "X-JUGEMKEY-API-KEY"     => @api_key,
