@@ -1,6 +1,6 @@
 # JugemKey
 
-TODO: Write a gem description
+A simple interface for using the JugenKey Auththentication API.
 
 ## Installation
 
@@ -18,7 +18,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'jugem_key'
+
+    api = JugemKey::Auth.new {
+      api_key: '...',
+      secret:  '...'
+    }
+
+    # make login uri
+    uri = api.uri_to_login {
+      callback_url: 'http://yourapp_callback_url',
+      params1:      'value1',
+      params2:      'value2'
+    }
+    puts uri
+
+    # exchange frob for token
+    frob = params[:frob]
+    user = api.token(frob) rescue "Couldn't get token" 
+    user.name
+    user.token
+
+    # get user info from token
+    user = api.user(token) rescue "Couldn't get user"
+    user.name
 
 ## Contributing
 
