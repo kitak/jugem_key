@@ -18,14 +18,14 @@ module JugemKey
     def uri_to_login(params)
       sig = api_sig({
         api_key: @api_key,
-        callback_url: params[:callback_uri],
+        callback_url: params[:callback_url],
         perms: "read"      
       })
 
       query = {
         mode:    "auth_issue_frob",
         api_key: @api_key,
-        perms:   "read",
+        perms:   "auth",
         api_sig: sig
       }.merge(params).map { |k, v|
         k.to_s + "=" + CGI.escape(v)
