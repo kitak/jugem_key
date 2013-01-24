@@ -47,10 +47,7 @@ module JugemKey
         "X-JUGEMKEY-API-SIG"     => sig
       })
 
-      token = REXML::Document.new(atom).elements['entry/token'].text
-      require 'pp'
-      pp token 
-      token
+      return REXML::Document.new(atom).elements['entry/token'].text
     end
 
     def user(token)
@@ -66,10 +63,7 @@ module JugemKey
         "X-JUGEMKEY-API-SIG"     => sig
       })
 
-      user = REXML::Document.new(atom).elements['entry/title'].text
-      require 'pp'
-      pp user 
-      user
+      return REXML::Document.new(atom).elements['entry/title'].text
     end
 
     private
