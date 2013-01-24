@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = JugemKey::VERSION
   gem.authors       = ["Keisuke KITA"]
   gem.email         = ["kei.kita2501@gmail.com"]
-  gem.description   = %q{A simple interface for using the JugenKey Auththentication API.}
+  gem.description   = %q{A simple interface for using the JugenKey Authentication API.}
   gem.summary       = %q{using the JugemKey auth}
   gem.homepage      = ""
 
