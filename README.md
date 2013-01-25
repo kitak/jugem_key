@@ -18,6 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
+    ```ruby
     require 'jugem_key'
 
     api = JugemKey::Auth.new {
@@ -42,6 +43,7 @@ Or install it yourself as:
     # get user info from token
     user = api.user(token) rescue "Couldn't get user"
     user.name
+    ```
 
 ## Contributing
 
