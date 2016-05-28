@@ -1,6 +1,6 @@
 # JugemKey
 
-A simple interface for using the JugenKey Auththentication API.
+A simple interface for using the JugemKey Auththentication API.
 
 ## Installation
 
